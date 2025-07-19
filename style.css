@@ -1,0 +1,148 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f1f1f1;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== Header Section ===== */
+header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.header-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.glow {
+  color: #fff;
+  text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff, 0 0 30px #00e5ff;
+}
+
+/* Typing Text Animation */
+.typing-text {
+  font-size: 1.2rem;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #00e5ff;
+  color: #0f2027;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+.btn:hover {
+  background: #14ffec;
+  color: #1f1f1f;
+  transform: scale(1.05);
+}
+
+/* ===== Card Sections ===== */
+.card {
+  max-width: 900px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.card h2 {
+  color: #00e5ff;
+  margin-bottom: 10px;
+}
+
+/* Skills Styling */
+.skills p {
+  background: #1e2a38;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  display: inline-block;
+  color: #fff;
+  box-shadow: 0 0 5px #00e5ff;
+}
+
+/* ===== Project Grid ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 229, 255, 0.2);
+}
+
+/* ===== Background Floating Circles Animation ===== */
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 229, 255, 0.3);
+  bottom: -150px;
+  animation: float 25s linear infinite;
+  border-radius: 50%;
+}
+
+.circles li:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
+.circles li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
+.circles li:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
+.circles li:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
+.circles li:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
+.circles li:nth-child(6) { left: 75%; width: 110px; height: 110px; animation-delay: 3s; }
+.circles li:nth-child(7) { left: 35%; width: 150px; height:
