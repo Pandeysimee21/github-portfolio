@@ -1,57 +1,64 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simee Pandey | Portfolio Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simee's GitHub Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Header -->
-<header>
-    <div class="profile-pic">
-      <image scr="
-      <h1>Hi, I'm Simee Pandey</h1>
-      <p>AI & Data Science | Python | Web Enthusiast</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
+  <nav>
+    <ul>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#github">GitHub</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1><span class="typing"></span></h1>
+    <p>AI & Data Science | IBM SkillsBuild Intern</p>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="card">
-    <h2>About Me</h2>
-    <p>I’m Simee Pandey, a B.Tech student in Computer Science and Engineering (CSE) with a specialization in Artificial Intelligence and Data Science (AI & DS) at Arka Jain University, graduating in 2027.
+  <section class="animated-section" id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>SQL</li>
+      <li>Power BI</li>
+      <li>Machine Learning</li>
+      <li>NLP</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
 
-I’m deeply passionate about using technology to turn raw data into meaningful insights. I enjoy building machine learning models, analyzing real-world datasets, and creating smart dashboards using tools like Python, Power BI, and cloud platforms. Currently, I’m enhancing my skills through academic projects and the IBM SkillsBuild program, where I work with industry-standard tools.
-
-My key interests include:
-
-    Machine Learning
-
-    Data Visualization
-
-    Natural Language Processing (NLP)
-
-    Cloud Computing & AI Deployment
-
- <!-- Projects Section -->
-  <section id="projects" class="card">
+  <section class="animated-section" id="projects">
     <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Mini Chatbot</h3>
-        <p>A simple chatbot using Python.</p>
-      </div>
-      <div class="project-card">
-        <h3>Data Analysis</h3>
-        <p>Data cleaning and visualization with Pandas.</p>
-      </div>
+    <div class="card">
+      <h3>🧠 Sentiment Analyzer</h3>
+      <p>Used Python NLP + IBM Cloud to analyze tweets.</p>
+    </div>
+    <div class="card">
+      <h3>📊 Sales Dashboard</h3>
+      <p>Power BI dashboard for retail KPIs.</p>
     </div>
   </section>
 
-  <!-- Footer -->
+  <section class="animated-section" id="github">
+    <h2>GitHub Stats</h2>
+    <img src="https://github-readme-stats.vercel.app/api?username=simeepandey&show_icons=true&theme=radical" alt="GitHub Stats" />
+  </section>
+
+  <section class="animated-section" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: simeepandey@example.com</p>
+    <p>GitHub: <a href="https://github.com/simeepandey">simeepandey</a></p>
+  </section>
+
   <footer>
-    <p>© 2025 Simee Pandey | <a href="mailto:simeepandey@gmail.com">Contact Me</a></p>
+    <p>Made with ❤ by Simee Pandey</p>
   </footer>
 </body>
 </html>
