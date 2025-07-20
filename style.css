@@ -1,161 +1,117 @@
-/* Reset */
-body {
+* {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color:lavender;
-  line-height: 1.6;
-  overflow-x: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/* ===== Header Section ===== */
-header {
-  position: relative;
-  height: 100vh;
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 0 20px;
+}
+
+nav {
+  background: #161b22;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
   display: flex;
-  align-items: center;
   justify-content: center;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header {
   text-align: center;
-  color: #fff;
-  background-image:url("https://kahedu.edu.in/n/wp-content/uploads/2023/07/WhatsApp-Image-2024-02-15-at-12.24.11-PM-990x500.jpeg");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  overflow: hidden;
-}
-header::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  height:100vh;
-  width:100vh;
-    background-color:black(0,0,0,0.6);
-  z-index:1;
-
-.header-content h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+  padding: 3rem 0;
 }
 
-.glow {
-  color: #fff;
-  text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff, 0 0 30px #00e5ff;
-}
-
-/* Typing Text Animation */
-.typing-text {
-  font-size: 1.2rem;
-  border-right: 2px solid #fff;
+.typing {
+  font-size: 2.5rem;
+  color: #58a6ff;
+  border-right: 3px solid #58a6ff;
   white-space: nowrap;
   overflow: hidden;
-  width: 0;
-  animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+  display: inline-block;
+  animation: typing 3s steps(20, end), blink 0.8s infinite;
 }
 
 @keyframes typing {
+  from { width: 0; }
   to { width: 100%; }
 }
 
 @keyframes blink {
-  50% { border-color: transparent; }
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #58a6ff; }
 }
 
-/* Button Styling */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  background: #00e5ff;
-  color: #0f2027;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: 0.3s ease;
-  font-weight: bold;
-}
-.btn:hover {
-  background: #14ffec;
-  color: #1f1f1f;
-  transform: scale(1.05);
+section {
+  margin: 2rem 0;
 }
 
-/* ===== Card Sections ===== */
-.card {
-  max-width: 900px;
-  margin: 30px auto;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  text-align: center;
+h2 {
+  font-size: 2rem;
+  color: #58a6ff;
+  margin-bottom: 1rem;
 }
 
-.card h2 {
-  color: #00e5ff;
-  margin-bottom: 10px;
-}
-
-/* Skills Styling */
-.skills p {
-  background: #1e2a38;
-  padding: 10px;
-  margin: 8px;
-  border-radius: 6px;
-  display: inline-block;
-  color: #fff;
-  box-shadow: 0 0 5px #00e5ff;
-}
-
-/* ===== Project Grid ===== */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding-top: 10px;
-}
-
-.project-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-.project-card:hover {
-  transform: translateY(-5px);
-  background: rgba(0, 229, 255, 0.2);
-}
-
-/* ===== Background Floating Circles Animation ===== */
-.circles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-  margin: 0;
-  padding: 0;
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   list-style: none;
+  justify-content: center;
 }
 
-.circles li {
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: rgba(0, 229, 255, 0.3);
-  bottom: -150px;
-  animation: float 25s linear infinite;
-  border-radius: 50%;
+li {
+  background: #161b22;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
-.circles li:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
-.circles li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
-.circles li:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
-.circles li:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
-.circles li:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
-.circles li:nth-child(6) { left: 75%; width: 110px; height: 110px; animation-delay: 3s; }
-.circles li:nth-child(7) { left: 35%; width: 150px; height:
+.card {
+  background: #161b22;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px #58a6ff55;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #58a6ff44;
+}
+
+footer {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+/* Animation */
+.animated-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.animated-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+  
+
+
